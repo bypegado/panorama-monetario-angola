@@ -6,94 +6,65 @@ Projeto de análise de dados económicos com foco no panorama monetário de Ango
 
 ## 🎯 Objetivo
 
-* Transformar dados brutos em formato analítico
-* Construir um modelo estrela (Data Warehouse)
-* Criar dashboards para análise temporal
+- Transformar dados brutos em formato analítico  
+- Construir um modelo estrela (Data Warehouse)  
+- Criar dashboards para análise temporal e suporte à decisão  
 
 ---
 
 ## 🏗️ Modelo de Dados
 
-O projeto segue um modelo estrela composto por:
+O projeto segue um modelo dimensional (modelo estrela) composto por:
 
-* **dim_conta** → classificação das contas
-* **dim_data** → dimensão temporal (mensal)
-* **fato_balance** → valores monetários
+- **dim_conta** → classificação das contas  
+- **dim_data** → dimensão temporal (mensal)  
+- **fato_balance** → valores monetários  
 
 ---
 
 ## ⚙️ Engenharia de Dados
 
-Os dados originais estavam em formato não estruturado (wide format e agregados por ano).
+Os dados originais estavam em formato não estruturado (wide format e agregados por ano), exigindo um processo completo de transformação.
 
-Principais transformações:
+Principais etapas:
 
-* Reconstrução do cabeçalho
-* Conversão e limpeza dos valores
-* Expansão de dados anuais para granularidade mensal
-* Criação de dimensões e tabela facto
+- Reconstrução do cabeçalho  
+- Limpeza e normalização dos dados  
+- Transformação para formato analítico  
+- Expansão de dados anuais para granularidade mensal  
+- Criação das tabelas dimensão e tabela facto  
 
 ---
 
 ## 🛠️ Tecnologias
 
-* Python (Pandas)
-* Power BI
-* Excel
+- Python (Pandas)  
+- Power BI  
+- Excel  
 
 ---
 
-## ▶️ Como executar
+## Dashboard
+<img width="1420" height="796" alt="Screenshot 2026-05-02 220521" src="https://github.com/user-attachments/assets/21ff1a9f-8825-4d80-943d-20686f0d3596" />
 
-1. Instalar dependências:
+<img width="1439" height="809" alt="Screenshot 2026-05-02 000447" src="https://github.com/user-attachments/assets/8e66afd0-0685-4544-81b9-16eca2b66937" />
 
-```
-pip install pandas openpyxl
-```
-
-2. Executar o script:
-
-```
-python transformacao.py
-```
-
-3. Importar os ficheiros no Power BI
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-├── dataset sem agregação.xlsx
-├── transformacao.py
-├── dim_conta_final.csv
-├── dim_data_final.csv
-├── fato_balance_final.csv
-└── README.md
-```
-
----
-
-## 📊 Dashboard
-<img width="1509" height="845" alt="image" src="https://github.com/user-attachments/assets/c9575b3f-c46f-4d18-aae7-958c51dfea24" />
-
-
-<img width="1511" height="849" alt="image" src="https://github.com/user-attachments/assets/3a248491-99d0-4bb7-ac45-7e395ba9bb99" />
-
-<img width="1508" height="841" alt="image" src="https://github.com/user-attachments/assets/e25d3982-4513-4239-b39d-5c61bcc12831" />
-
-<img width="1511" height="847" alt="image" src="https://github.com/user-attachments/assets/0a0132d1-e472-40de-bc84-0cb750186c0f" />
-
-
+<img width="1508" height="848" alt="Screenshot 2026-05-02 172314" src="https://github.com/user-attachments/assets/fc3efeca-2193-4877-9d30-c66af7debf53" />
 
 
 ## 💡 Nota Técnica
 
 Os dados estavam originalmente agregados por ano.
-Foi necessário expandir para granularidade mensal para permitir análises temporais mais detalhadas.
+Foi necessário expandir para granularidade mensal para permitir análises temporais mais detalhadas e consistentes.
 
----
+🚀 Resultado
 
-## 🚀 Resultado
+Modelo de dados estruturado e pronto para análise, permitindo:
 
-Modelo de dados estruturado e pronto para análise, permitindo identificar tendências, variações e padrões no sistema monetário.
+Identificar tendências económicas
+Analisar variações ao longo do tempo
+Apoiar decisões com base em dados confiáveis
+🔗 Acesso ao Dashboard
+
+👉 Explore o dashboard interativo:
+https://bit.ly/panorama_monetario_de_angola
